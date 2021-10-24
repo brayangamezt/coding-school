@@ -1,0 +1,426 @@
+/*FUENTES PERSONALIZADAS*/
+@font-face{
+    font-family: "TrebuchetMS";
+    src:url(fonts/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "BebasNeue";
+    src:url(fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src:url(fonts/websymbols-regular-webfont.eot);
+    src:url(fonts/websymbols-regular-webfont.eot?#iefix) format('embedded-opentype'),
+        url(fonts/websymbols-regular-webfont.woff) format('woff'),
+        url(fonts/websymbols-regular-webfont.ttf) format('truetype'),
+        url(fonts/websymbols-regular-webfont.svg#webSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Fin de las fuentes personalizadas*/
+
+/*Estilos generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: url(../img/pattern.png);
+}
+.gear, .icon{
+    font-family:WebSymbolsRegular ;
+}
+
+/*INICIO DE ESTILOS EN EL HEADER*/
+#header{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: "BebasNeue";
+}
+.wrap{
+    width: 30%;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap #logo{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(65, 201, 255);
+    border-radius: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 300ms;
+    overflow: hidden;
+}
+#header .wrap #logo .gear{
+    animation-name: rotate-gear; /*Nombre que le dimos al keyframes*/
+    animation-duration: 5s; /*Esto es la velocidad a la que se mueve*/
+    animation-iteration-count: infinite; /*Cuanto se va repetir*/
+    animation-timing-function: linear;/*Para mantener una misma velocidad*/
+}
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg)
+    }
+    to{
+        transform: rotateZ(360deg)
+    }
+}
+#header .wrap #logo:hover{
+    border-radius: 3px;
+    background-color: blanchedalmond;
+    color:black;
+    animation: none;
+}
+
+#header .wrap #logo:hover h3{
+    animation:fromRight 300ms linear ;
+}
+@keyframes fromRight{
+    from{transform: translateX(200%);}
+    to{transform: translateX(0%);}
+}
+
+#header .wrap #logo:hover .gear{
+    animation: fromBellow 500ms linear;
+}
+@keyframes fromBellow{
+    0%{transform: translateY(0%);}
+    50%{transform: translateY(200%);}
+    100%{transform: translateY(0%);}
+}
+
+#menu{
+    width: 70%;
+}
+#menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu ul li{
+    margin-left: 60px;
+    list-style: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+#menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+#header #menu ul li a:hover{
+    transform: scale(1.3,1.3);
+    color: rgb(65, 201, 255);
+}
+/*FIN ESTILOS DEL HEADER*/
+
+/*INICIO ESTILOS MAIN*/
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: white;
+}
+main h1{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin: auto;
+}
+main #container{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main #container a{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 40px;
+}
+main #container #instagram{
+    color: orangered;
+}
+main #container #twitter{
+    color: rgb(101, 207, 240);
+}
+main #container #email{
+    color: red;
+}
+main form{
+    border: 2px solid black;
+    width: 30%;
+    padding: 15px;
+    margin: auto;
+}
+main form textarea{
+    width: 90%;
+}
+/*FIN ESTILOS MAIN*/
+
+
+/*INICIO ESTILOS FOOTER*/
+footer{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    min-height: 100vh;
+}
+footer .footer-card{
+    width: 20%;
+    height: 250px;
+    margin-right: 50px;
+}
+footer h3{
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    margin-bottom: 5px;
+    background-color: blanchedalmond;
+    border-radius: 4px;
+}
+footer #first ul li{
+    width: 60%;
+    margin-top: 15px;
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+}
+footer #first ul li:first-child{
+    border: none;  
+}
+footer #first ul li a{
+    color: rgb(65, 201, 255);
+    text-decoration: none;
+}
+#location #map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#location iframe{
+    width: 90%;
+    height: 200px;
+    margin-top: 10px;
+}
+#information #browser{
+    display: flex;
+    justify-content: space-around;
+}
+#information #browser a img{
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+}
+/*FIN ESTILOS FOOTER*/
+
+/*INICIO DEL RESPONSIVE*/
+
+@media(max-width:1000px){
+    main h1{
+        font-size: 20px;
+    }
+    main form{
+        width: 50%;
+    }
+    footer .footer-card{
+        width: 30%;
+    }
+    footer h3{
+        width: 100%;
+    }
+}
+@media (max-width:800px){
+    #header .wrap{
+        margin-right: 15px;
+    }
+    #header .wrap #logo{
+        width: 60%;
+    }
+    #menu ul li{
+        margin-left: 40px;
+    }
+    footer h3{
+        font-size: 20px;
+    }
+    footer #information p #first-img{
+        width: 70%;
+    }
+    footer #information #browser a img{
+        width: 90%;
+        height: 30px;
+        margin: 5px;
+    }
+}
+
+@media (max-width:650px){
+    #header{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #header .wrap{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #header .wrap #logo .gear{
+        font-size: 30px;
+    }
+    #header .wrap #logo h3{
+        font-size: 30px;
+    }
+    main h1{
+        width: 70%;
+    }
+    main form{
+        width: 70%;
+    }
+    #header .wrap{
+        width: 100%;
+    }
+    #header .wrap #logo{
+        width: 40%;
+    }
+    #header #menu{
+        width: 100%;
+    }
+    #header menu ul li{
+        margin-left: 0px;
+    }
+    #header #menu ul{
+        display: flex;
+        justify-content: space-around;
+    }
+ 
+    footer h3{
+        font-size: 15px;
+    }
+    footer #location #map iframe{
+        width: 80%;
+        height: 150px;
+    }
+    footer #information p #first-img{
+        width: 90%;
+    }
+    #information #browser a img{
+        width: 80%;
+        height:30px ;
+    }
+
+    #lateral #search form input[type="button"]{
+        width: 30%;
+        margin-left: 400px;
+    }
+    footer #information #audor{
+        width: 100%;
+        font-size: 12px;
+    }
+}
+@media(max-width:600px){
+    #header{
+        width: 100%;
+    }
+}
+
+@media (max-width:500px){
+    #header{
+        width: 100%;
+    }
+    #header .wrap{
+        margin-right: 0px;
+    }
+    #header #menu{
+        width: 100%;
+        display: flex;
+    }
+    #header .wrap #logo .gear{
+        font-size: 20px;
+    }
+    #header .wrap #logo h3{
+        font-size: 20px;
+    }
+    #header #menu ul li a{
+        font-size: 17px;
+    }
+   
+    footer{
+        width: 100%;
+        display: flex;
+
+    }
+    footer #information{
+        display: none;
+    }
+    footer #first{
+        flex-basis: 40%;
+    }
+    footer #location{
+        flex-basis: 40%;
+    }
+}
+@media (max-width:480px){
+    #header{width: 100%;}
+}
+@media (max-width:450px){
+    #header{width: 100%;}
+    main h1{
+        width: 80%;
+    }
+
+}
+@media (max-width:420px){
+    #header{width: 100%;}
+}
+@media(max-width:400px){
+    main h1{
+        width: 100%;
+        font-size: 18px;
+    }
+}
+@media(max-width:375px){
+    #header{
+        width: 100%;
+    }
+    #header #menu ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+    #header #menu ul li a{
+        font-size: 15px;
+    }
+}
+@media(max-width:360px){
+    #header{
+        width: 100%;
+    }
+}
+@media(max-width:320px){
+    #header #menu ul li a{
+        font-size: 10px;
+    }
+}
+/*FIN DEL RESPONSIVE*/

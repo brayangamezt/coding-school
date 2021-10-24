@@ -1,0 +1,565 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*FUENTES PERSONALIZADAS*/
+@font-face{
+    font-family: "TrebuchetMS";
+    src:url(fonts/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "BebasNeue";
+    src:url(fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family: "WebSymbolsRegular";
+    src:url(fonts/websymbols-regular-webfont.eot);
+    src:url(fonts/websymbols-regular-webfont.eot?#iefix) format('embedded-opentype'),
+        url(fonts/websymbols-regular-webfont.woff) format('woff'),
+        url(fonts/websymbols-regular-webfont.ttf) format('truetype'),
+        url(fonts/websymbols-regular-webfont.svg#webSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/*Fin de las fuentes personalizadas*/
+/*Estilos generales*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: url(../img/pattern.png);
+}
+.gear, .icon{
+    font-family:WebSymbolsRegular ;
+}
+/*INICIO DE ESTILOS EN EL HEADER*/
+#header{
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    font-family: "BebasNeue";
+}
+.wrap{
+    width: 30%;
+    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap #logo{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(65, 201, 255);
+    border-radius: 5px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 300ms;
+    overflow: hidden;
+}
+#header .wrap #logo .gear{
+    animation-name: rotate-gear; /*Nombre que le dimos al keyframes*/
+    animation-duration: 5s; /*Esto es la velocidad a la que se mueve*/
+    animation-iteration-count: infinite; /*Cuanto se va repetir*/
+    animation-timing-function: linear;/*Para mantener una misma velocidad*/
+}
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg)
+    }
+    to{
+        transform: rotateZ(360deg)
+    }
+}
+#header .wrap #logo:hover{
+    border-radius: 3px;
+    background-color: blanchedalmond;
+    color:black;
+    animation: none;
+}
+
+#header .wrap #logo:hover h3{
+    animation:fromRight 300ms linear ;
+}
+@keyframes fromRight{
+    from{transform: translateX(200%);}
+    to{transform: translateX(0%);}
+}
+
+#header .wrap #logo:hover .gear{
+    animation: fromBellow 500ms linear;
+}
+@keyframes fromBellow{
+    0%{transform: translateY(0%);}
+    50%{transform: translateY(200%);}
+    100%{transform: translateY(0%);}
+}
+
+#menu{
+    width: 70%;
+}
+#menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu ul li{
+    margin-left: 60px;
+    list-style: none;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+#menu ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+#header #menu ul li a:hover{
+    transform: scale(1.3,1.3);
+    color: rgb(65, 201, 255);
+}
+/*FIN ESTILOS DEL HEADER*/
+
+/*INICIOS DEL MAIN*/
+main{
+    width: 80%;
+    margin:0 auto;
+    padding: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: white;
+    box-shadow: 0px 0px 7px black;
+    display: flex;
+    flex-direction: column;
+}
+/*FIN DEL MAIN*/
+
+/*Inicio de la presentacion*/
+main #presentation{
+    background-image: url(../img/coding.jpg);
+    background-position: center;
+    color: white;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+main #presentation p{
+    font-family: BebasNeue;
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    text-shadow: 1px 1px 0px blue;
+}
+/*fin de la presetancion*/
+
+/*informacion de los cursos*/
+main section{
+    margin-top: 30px;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    border: 2px solid gray;
+}
+main .image{
+    flex-basis: 30%;
+    height: 200px;
+
+}
+main .image img{
+    width: 100%;
+    height: 200px;
+}
+main  .container{
+    flex-basis: 70%;
+    margin-left: 5px;
+    padding: 5px;
+    text-align: justify;
+}
+main .container p{
+    margin-top: 20px;
+    font-size: 18px;
+}
+main section .container h1 a{
+    text-decoration: none;
+    color: black;
+}
+main section .container h1:hover{
+    transform: scale(1.03);
+}
+main #first-section{
+    margin-top: 100px;
+}
+/*fin de los cursos*/
+
+/*INICIO SISTEMAS OPERATIVOS*/
+#title-sistems{
+    width: 100%;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+    font-size: 40px;
+
+}
+#sistems{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    padding: 20px;
+}
+#sistems .card{
+    flex-basis: 23%;
+    height: 540px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow:0px 0px 7px black;
+    background-color: white;
+}
+#sistems .card .title-sistem{
+    text-align: center;
+    padding: 5px;
+    font-family: 'Trebuchet MS',  Arial, sans-serif;
+    letter-spacing: 2px;
+}
+#sistems .card .title-sistem a{
+    text-decoration: none;
+    color: black;
+    text-shadow: 2px 2px 0px gray;
+}
+#sistems .card .description{
+    font-size: 18px;
+    text-align: justify;
+    padding: 8px;
+}
+
+/*FIN SISTEMAS OPERATIVOS*/
+
+
+
+
+
+/*INICIO ESTILOS FOOTER*/
+footer{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    min-height: 300px;
+}
+footer .footer-card{
+    width: 20%;
+    height: 250px;
+    margin-right: 50px;
+}
+footer h3{
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    margin-bottom: 5px;
+    background-color: blanchedalmond;
+    border-radius: 4px;
+}
+footer #first ul li{
+    width: 60%;
+    margin-top: 15px;
+    margin-left: 20px;
+    color: white;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+}
+footer #first ul li:first-child{
+    border: none;  
+}
+footer #first ul li a{
+    color: rgb(65, 201, 255);
+    text-decoration: none;
+}
+#location #map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#location iframe{
+    width: 90%;
+    height: 200px;
+    margin-top: 10px;
+}
+#information #browser{
+    display: flex;
+    justify-content: space-around;
+}
+#information #browser a img{
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+}
+/*FIN ESTILOS FOOTER*/
+
+/*INICIO DEL RESPONSIVE*/
+/*INICIO DEL RESPONSIVE*/
+@media(max-width:1100px){
+    #sistems .card{
+        margin-top: 25px;
+    }
+}
+@media(max-width:1000px){
+
+    footer .footer-card{
+        width: 30%;
+    }
+    footer h3{
+        width: 100%;
+    }
+}
+@media(max-width:900px){
+    main section .image img{
+
+        height: 150px;
+    }
+    main section .container p{
+        margin-top: 5px;
+    }
+}
+@media(max-width:850px){
+    main #presentation p{
+        font-size: 15px;
+    }
+}
+@media (max-width:800px){
+    #header .wrap{
+        margin-right: 15px;
+    }
+    #header .wrap #logo{
+        width: 60%;
+    }
+    #menu ul li{
+        margin-left: 40px;
+    }
+    footer h3{
+        font-size: 20px;
+    }
+    footer #information p #first-img{
+        width: 70%;
+    }
+    footer #information #browser a img{
+        width: 90%;
+        height: 30px;
+        margin: 5px;
+    }
+    main section .container h1 a{
+        font-size: 20px;
+    }
+    main section{
+        height: 250px;
+    }
+    #sistems .card{
+        flex-basis: 23%;
+        height: 550px;
+    }
+
+}
+@media(max-width:660px){
+    main section{
+        height: 280px;
+    }
+}
+
+@media (max-width:650px){
+    #header{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #header .wrap{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    #header .wrap #logo .gear{
+        font-size: 30px;
+    }
+    #header .wrap #logo h3{
+        font-size: 30px;
+    }
+ 
+    #header .wrap{
+        width: 100%;
+    }
+    #header .wrap #logo{
+        width: 40%;
+    }
+    #header #menu{
+        width: 100%;
+    }
+    #header menu ul li{
+        margin-left: 0px;
+    }
+    #header #menu ul{
+        display: flex;
+        justify-content: space-around;
+    }
+ 
+    footer h3{
+        font-size: 15px;
+    }
+    footer #location #map iframe{
+        width: 80%;
+        height: 150px;
+    }
+    footer #information p #first-img{
+        width: 90%;
+    }
+    footer #information #audor{
+        width: 100%;
+        font-size: 12px;
+    }
+}
+@media(max-width:600px){
+    #header{
+        width: 100%;
+    }
+    main section .image{
+        display: none;
+    }
+    main section .container{
+        flex-basis: 100%;
+    }
+    main #presentation p{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:500px){
+    #header{
+        width: 100%;
+    }
+    #header .wrap{
+        margin-right: 0px;
+    }
+    #header #menu{
+        width: 100%;
+        display: flex;
+    }
+    #header .wrap #logo .gear{
+        font-size: 20px;
+    }
+    #header .wrap #logo h3{
+        font-size: 20px;
+    }
+    #header #menu ul li a{
+        font-size: 17px;
+    }
+   
+    footer{
+        width: 100%;
+        display: flex;
+
+    }
+    footer #information{
+        display: none;
+    }
+    footer #first{
+        flex-basis: 40%;
+    }
+    footer #location{
+        flex-basis: 40%;
+    }
+    #title-sistems{
+        font-size: 25px;
+    }
+    main #presentation p{
+        font-size: 8px;
+    }
+}
+@media (max-width:480px){
+    #header{width: 100%;}
+}
+@media (max-width:450px){
+    #header{width: 100%;}
+
+}
+@media (max-width:420px){
+    #header{width: 100%;
+    }
+    main{
+        padding: 10px;
+    }
+    main section {
+        height: 300px;
+    }
+
+}
+@media(max-width:400px){
+    main section {
+        height: 350px;
+    }
+    main #presentation {
+        display: none;
+    }
+    #sistems{
+        width: 80%;
+    }
+    #sistems .card{
+        flex-basis: 20%;
+        padding: 22px;
+    }
+    #sistems .card .description{
+        font-size: 15px;
+    }
+}
+
+@media(max-width:375px){
+    #header{
+        width: 100%;
+    }
+    #header #menu ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+    #header #menu ul li a{
+        font-size: 15px;
+    }
+}
+@media(max-width:360px){
+    #header{
+        width: 100%;
+    }
+}
+@media(max-width:350px){
+    main section {
+        height: 320px;
+    }
+    main section .container h1 a{
+        font-size: 15px;
+    }
+    main section .container p{
+        font-size: 14px;
+    }
+    #sistems .card{
+        flex-basis: 20%;
+    }
+}
+@media(max-width:320px){
+    #header #menu ul li a{
+        font-size: 10px;
+    }
+}
+/*FIN DEL RESPONSIVE*/

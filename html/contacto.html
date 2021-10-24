@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="favicon/x-1" href="../img/supertux.png">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <script type="text/javascript" src="../jquery/jquery-3.6.0.min.js"></script>
+    <script src="https://kit.fontawesome.com/29ac9bb5bb.js" crossorigin="anonymous"></script>
+    <title>Coding school</title>
+</head>
+<body>
+    <!--Inicio de la cabecera-->
+    <header id="header">
+        <div class="wrap">
+            <div id="logo">
+                <span class="gear">S</span>
+                <h3>CSchool</h3>
+            </div>
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="formacion.html">Formacion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Fin de la cabecera-->
+
+    <main>
+        <h1>Encuentranos en redes sociales o contactanos a traves del formulario </h1>
+        <div id="container">
+            <a href="#"><i class="fab fa-facebook-square" id="facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram-square" id="instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter-square" id="twitter"></i></a>
+            <a href="#"><i class="far fa-envelope" id="email"></i></a>
+        </div>
+        <form action="">
+            <label for="names">Nombre</label><br>
+            <input type="text" name="names" placeholder="Introduce tu nombre"><br>
+            <label for="mail">Email</label><br>
+            <input type="email" name="mail" placeholder="Introduce email"><br>
+            <label for="comments">Comentarios</label><br>
+            <textarea name="comments" placeholder="Dejanos tus comentarios" ></textarea><br>
+            <button id="boton" type="submit">Enviar</button>
+        </form>
+    </main>
+
+
+     <!--Inicio del pie de pagina-->
+    <footer>
+        <div id="first" class="footer-card">
+            <h3>MENU</h3>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="html/cursos.html">Cursos</a></li>
+                <li><a href="formacion.html">Formacion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div id="location" class="footer-card">
+            <h3>Donde estamos</h3>
+            <div id="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3487.3738259084903!2d-110.95220218558191!3d29.065096471123514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce85aab36b94e1%3A0xde6c2f1093cd6575!2sGaler%C3%ADas%20Mall%20Sonora!5e0!3m2!1ses-419!2smx!4v1632255631764!5m2!1ses-419!2smx"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div id="information" class="footer-card">
+            <h3>Desarrollado con</h3>
+            <p><img id="first-img" src="../img/html5-badge-h-css3-graphics-multimedia-performance-semantics.png" alt="">
+            </p>
+            <h3>Optimizado para</h3>
+            <p id="browser">
+                <a href=""><img src="../img/firefox-icon.png" alt="Firefox"></a>
+                <a href=""><img src="../img/chrome.png" alt="Chrome"></a>
+                <a href=""><img src="../img/Opera_256x256.png" alt="Opera"></a>
+                <a href=""><img src="../img/safari.png" alt="Safari"></a>
+                <a href=""><img src="../img/android.png" alt="Android"></a>
+            </p>
+            <h5>Autor</h5>
+            <p id="audor">&copy; Brayan Gamez dev</p>
+        </div>
+    </footer>
+    <!--Fin de pie de pagina-->
+    
+    <script src="../js/contact.js"></script>
+</body>
+</html>
