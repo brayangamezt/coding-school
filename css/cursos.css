@@ -168,7 +168,6 @@ main #presentation p{
 /*informacion de los cursos*/
 main section{
     margin-top: 30px;
-    height: 200px;
     padding: 10px;
     display: flex;
     border: 2px solid gray;
@@ -220,10 +219,13 @@ main #first-section{
     flex-wrap: wrap;
     margin-bottom: 50px;
     padding: 20px;
+    border: 2px solid black;
+    background-color:white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px black;
 }
 #sistems .card{
-    flex-basis: 23%;
-    height: 540px;
+    flex-basis: 25%;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow:0px 0px 7px black;
@@ -314,11 +316,31 @@ footer #first ul li a{
 /*INICIO DEL RESPONSIVE*/
 /*INICIO DEL RESPONSIVE*/
 @media(max-width:1100px){
+    #header{
+        width: 100%;
+    }
     #sistems .card{
         margin-top: 25px;
     }
 }
+@media(max-width:1050px){
+    #header{
+        width: 100%;
+    }
+    #sistems{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #sistems .card{
+        width: 40%;
+    }
+}
 @media(max-width:1000px){
+    #header{
+        width: 100%;
+    }
 
     footer .footer-card{
         width: 30%;
@@ -328,8 +350,10 @@ footer #first ul li a{
     }
 }
 @media(max-width:900px){
+    #header{
+        width: 100%;
+    }
     main section .image img{
-
         height: 150px;
     }
     main section .container p{
@@ -337,11 +361,17 @@ footer #first ul li a{
     }
 }
 @media(max-width:850px){
+    #header{
+        width: 100%;
+    }
     main #presentation p{
         font-size: 15px;
     }
 }
 @media (max-width:800px){
+    #header{
+        width: 100%;
+    }
     #header .wrap{
         margin-right: 15px;
     }
@@ -365,18 +395,23 @@ footer #first ul li a{
     main section .container h1 a{
         font-size: 20px;
     }
-    main section{
-        height: 250px;
-    }
     #sistems .card{
-        flex-basis: 23%;
-        height: 550px;
+        width: 50%;
     }
 
 }
+@media(max-width:700px){
+    #header{
+        width: 100%;
+    }
+    #sistems{
+        border: none;
+        box-shadow: none;
+    }
+}
 @media(max-width:660px){
-    main section{
-        height: 280px;
+    #header{
+        width: 100%;
     }
 }
 
@@ -428,6 +463,9 @@ footer #first ul li a{
     footer #information #audor{
         width: 100%;
         font-size: 12px;
+    }
+    #sistems .card{
+        width: 60%;
     }
 }
 @media(max-width:600px){
@@ -486,6 +524,9 @@ footer #first ul li a{
     main #presentation p{
         font-size: 8px;
     }
+    #sistems .card{
+        width: 80%;
+    }
 }
 @media (max-width:480px){
     #header{width: 100%;}
@@ -500,27 +541,17 @@ footer #first ul li a{
     main{
         padding: 10px;
     }
-    main section {
-        height: 300px;
-    }
 
 }
 @media(max-width:400px){
-    main section {
-        height: 350px;
+    #header{
+        width: 100%;
     }
     main #presentation {
         display: none;
     }
-    #sistems{
-        width: 80%;
-    }
     #sistems .card{
-        flex-basis: 20%;
-        padding: 22px;
-    }
-    #sistems .card .description{
-        font-size: 15px;
+        width: 100%;
     }
 }
 
@@ -544,20 +575,21 @@ footer #first ul li a{
     }
 }
 @media(max-width:350px){
-    main section {
-        height: 320px;
+    #header{
+        width: 100%;
     }
+
     main section .container h1 a{
         font-size: 15px;
     }
     main section .container p{
         font-size: 14px;
     }
-    #sistems .card{
-        flex-basis: 20%;
-    }
 }
 @media(max-width:320px){
+    #header{
+        width: 100%;
+    }
     #header #menu ul li a{
         font-size: 10px;
     }

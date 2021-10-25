@@ -1,6 +1,6 @@
 var maria=600;
 if(window.innerWidth <=400 ){
-    maria=400;
+    maria=300;
 }
 
 
